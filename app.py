@@ -5,15 +5,15 @@ import random
 from openpyxl import Workbook
 
 # Функция для загрузки данных из файлов в папке "clients"
-def load_client_files(folder_path='clients'):
-    all_files = [f for f in os.listdir(folder_path) if f.endswith('.xlsx')]
-    dataframes = []
-    for file in all_files:
-        df = pd.read_excel(os.path.join(folder_path, file))
-        dataframes.append(df)
-    return dataframes
+# def load_client_files(folder_path='clients'):
+#     all_files = [f for f in os.listdir(folder_path) if f.endswith('.xlsx')]
+#     dataframes = []
+#     for file in all_files:
+#         df = pd.read_excel(os.path.join(folder_path, file))
+#         dataframes.append(df)
+#     return dataframes
 
-# Функция для инициализации таблицы-шаблона с заголовками и подзаголовками
+# Функция для инициализации таблицы-шаблона с заголовками и подзаголовкам
 def initialize_template_table(headers, subheaders):
     template_df = pd.DataFrame({
         "Заголовки": headers,
